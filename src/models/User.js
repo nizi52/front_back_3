@@ -1,15 +1,9 @@
 const { DataTypes } = require('sequelize');
-const { sequelize } = require('../config/db');
-const { timeStamp } = require('node:console');
+const sequelize = require('../config/db');
 
 const User = sequelize.define(
     'User',
     {
-        id: {
-            type: DataTypes.INTEGER,
-            primaruKey: true,
-            autoIncrement: true,
-        },
         first_name: {
             type: DataTypes.STRING(100),
             allowNull: false,
@@ -37,4 +31,4 @@ const User = sequelize.define(
     }
 );
 
-modules.exports = User;
+module.exports = User;
